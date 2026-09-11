@@ -7,8 +7,8 @@
 
 <!-- Open Graph / Social Preview -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Training Assessment | استبيان البرنامج التدريبي">
-<meta property="og:description" content="DISCOVER YOUR LEVEL · BUILD YOUR TRAINING PLAN">
+<meta property="og:title" content="استبيان البرنامج التدريبي | Coach Anis">
+<meta property="og:description" content="استبيان البرنامج التدريبي">
 <meta property="og:image" content="https://coach-anis.github.io/Training-Questionnaire/preview.png">
 <meta property="og:image:width" content="1400">
 <meta property="og:image:height" content="700">
@@ -16,8 +16,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Training Assessment | استبيان البرنامج التدريبي">
-<meta name="twitter:description" content="DISCOVER YOUR LEVEL · BUILD YOUR TRAINING PLAN">
+<meta name="twitter:title" content="استبيان البرنامج التدريبي | Coach Anis">
+<meta name="twitter:description" content="استبيان البرنامج التدريبي">
 <meta name="twitter:image" content="https://coach-anis.github.io/Training-Questionnaire/preview.png">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
@@ -61,7 +61,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
 /* SEC HEAD */
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-.sec-icon{width:38px;height:38px;border-radius:9px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
 .sec-num{font-family:'Bebas Neue',sans-serif;font-size:9px;letter-spacing:3px;color:var(--gold);opacity:.6;}
 .sec-title{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;}
 .sec-title span{color:var(--gold);}
@@ -144,44 +143,79 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
 <div class="header">
   <div class="header-line"></div>
-  <div class="header-tag">TRAINING INTAKE FORM · استبيان البرنامج التدريبي</div>
-  <h1>ابدأ برنامجك التدريبي مع<br><span>COACH ANIS</span></h1>
-  <p>أجب بصدق وتفصيل — كلما كانت المعلومات أدق كان البرنامج التدريبي أقوى</p>
+  <h1>استبيان <span>البرنامج التدريبي</span></h1>
+  <p>أجب بصدق وتفصيل</p>
 </div>
 
 <!-- PROGRESS -->
 <div class="progress-wrap">
   <div class="step-dots" id="stepDots"></div>
   <div class="progress-bar-outer"><div class="progress-bar-fill" id="pFill" style="width:0%"></div></div>
-  <div class="progress-info"><span>القسم <b id="pNum">1</b> من 7</span><span id="pTitle">المعلومات الشخصية</span></div>
+  <div class="progress-info"><span>القسم <b id="pNum">1</b> من 11</span><span id="pTitle">المعلومات الشخصية</span></div>
 </div>
 
 <div class="form-wrap">
 
 <!-- SEC 1: المعلومات الشخصية والجسدية -->
 <div class="section-card active" id="sec1">
-  <div class="sec-head"><div class="sec-icon">👤</div><div><div class="sec-num">SECTION 01</div><div class="sec-title">المعلومات <span>الشخصية</span></div></div></div>
+  <div class="sec-head"><div><div class="sec-num">SECTION 01</div><div class="sec-title">المعلومات <span>الشخصية</span></div></div></div>
   <div class="grid3">
-    <div class="field" id="f_name"><label>الاسم الكامل <span class="req">*</span></label><input type="text" id="i_name" name="الاسم_الكامل" placeholder="مثال: أحمد بن علي"><span class="err-msg">هذا الحقل مطلوب</span></div>
-    <div class="field" id="f_age"><label>العمر <span class="req">*</span></label><input type="number" name="العمر" placeholder="25" min="14" max="70"><span class="err-msg">هذا الحقل مطلوب</span></div>
+    <div class="field" id="f_name"><label>الاسم الكامل <span class="req">*</span></label><input type="text" id="i_name" name="الاسم_الكامل"><span class="err-msg">هذا الحقل مطلوب</span></div>
+    <div class="field" id="f_age"><label>العمر <span class="req">*</span></label><input type="number" name="العمر" min="14" max="70"><span class="err-msg">هذا الحقل مطلوب</span></div>
     <div class="field" id="f_gender"><label>الجنس <span class="req">*</span></label><select name="الجنس"><option value="">اختر</option><option>ذكر</option><option>أنثى</option></select><span class="err-msg">الرجاء الاختيار</span></div>
   </div>
-  <div class="field"><label>الولاية</label><input type="text" name="الولاية" placeholder="مثال: الجزائر العاصمة"></div>
-  <div class="field"><label>المهنة وطبيعة العمل</label><input type="text" name="المهنة" placeholder="مثال: موظف إداري — جالس أغلب اليوم"></div>
-  <div class="field"><label>كم ساعة تجلس أو تقف في العمل؟</label>
-    <div class="chips">
-      <div class="chip" onclick="pick(this,'ساعات_العمل_جالس_واقف','أقل من 4 ساعات')">أقل من 4 س</div>
-      <div class="chip" onclick="pick(this,'ساعات_العمل_جالس_واقف','4-6 ساعات')">4–6 س</div>
-      <div class="chip" onclick="pick(this,'ساعات_العمل_جالس_واقف','6-8 ساعات')">6–8 س</div>
-      <div class="chip" onclick="pick(this,'ساعات_العمل_جالس_واقف','أكثر من 8 ساعات')">+8 س</div>
-    </div>
+  <div class="grid3">
+    <div class="field"><label>الطول (سم)</label><input type="number" id="i_height" name="الطول_سم" placeholder="175" min="140" max="220"></div>
+    <div class="field"><label>الوزن الحالي (كغ)</label><input type="number" id="i_weight" name="الوزن_كغ" placeholder="80" min="40" max="250"></div>
+    <div class="field"><label>الولاية</label><input type="text" name="الولاية"></div>
   </div>
+  <div class="field"><label>المهنة وطبيعة العمل</label><input type="text" name="المهنة"></div>
   <div class="nav-btns"><button class="btn-next" onclick="go(1,2)">التالي ←</button></div>
 </div>
 
-<!-- SEC 2: التاريخ التدريبي -->
+<!-- SEC 2: النشاط اليومي -->
 <div class="section-card" id="sec2">
-  <div class="sec-head"><div class="sec-icon">🏋️</div><div><div class="sec-num">SECTION 02</div><div class="sec-title">التاريخ <span>التدريبي</span></div></div></div>
+  <div class="sec-head"><div><div class="sec-num">SECTION 02</div><div class="sec-title">النشاط <span>اليومي</span></div></div></div>
+  <div class="field">
+    <label>طبيعة نشاطك أثناء العمل أو الدراسة أقرب إلى ماذا؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'طبيعة_النشاط_اليومي','جلوس مستمر')">جلوس مستمر</div>
+      <div class="chip" onclick="pick(this,'طبيعة_النشاط_اليومي','جلوس مع فترات حركة قصيرة')">جلوس مع فترات حركة قصيرة</div>
+      <div class="chip" onclick="pick(this,'طبيعة_النشاط_اليومي','الوقوف مع حركة بسيطة')">الوقوف مع حركة بسيطة</div>
+      <div class="chip" onclick="pick(this,'طبيعة_النشاط_اليومي','حركة ومشي متكرر')">حركة ومشي متكرر</div>
+      <div class="chip" onclick="pick(this,'طبيعة_النشاط_اليومي','عمل بدني شاق')">عمل بدني شاق</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>كم عدد خطواتك اليومية في المتوسط؟</label>
+    <input type="text" name="عدد_الخطوات_اليومية">
+  </div>
+  <div class="field">
+    <label>هل تستخدم وسيلة تتبع للخطوات؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'وسيلة_تتبع_الخطوات','نعم، ساعة ذكية')">نعم، ساعة ذكية</div>
+      <div class="chip" onclick="pick(this,'وسيلة_تتبع_الخطوات','نعم، الهاتف')">نعم، الهاتف</div>
+      <div class="chip" onclick="pick(this,'وسيلة_تتبع_الخطوات','لا')">لا</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>هل تقوم بأعمال منزلية أو مهام تتطلب حركة بشكل منتظم؟</label>
+    <input type="text" name="الأعمال_المنزلية_والحركة">
+  </div>
+  <div class="field">
+    <label>هل يختلف نشاطك اليومي بشكل واضح بين أيام العمل/الدراسة وأيام الراحة؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'اختلاف_النشاط_بين_أيام_العمل_والراحة','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'اختلاف_النشاط_بين_أيام_العمل_والراحة','نعم، أكون أكثر نشاطًا في أيام العمل/الدراسة')">نعم، أكون أكثر نشاطًا في أيام العمل/الدراسة</div>
+      <div class="chip" onclick="pick(this,'اختلاف_النشاط_بين_أيام_العمل_والراحة','نعم، أكون أكثر نشاطًا في أيام الراحة')">نعم، أكون أكثر نشاطًا في أيام الراحة</div>
+    </div>
+  </div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(2,1)">→</button><button class="btn-next" onclick="go(2,3)">التالي ←</button></div>
+</div>
+
+<!-- SEC 3: الخبرة والتجربة التدريبية -->
+<div class="section-card" id="sec3">
+  <div class="sec-head"><div><div class="sec-num">SECTION 03</div><div class="sec-title">الخبرة والتجربة <span>التدريبية</span></div></div></div>
   <div class="field">
     <label>كم سنة تتدرب؟</label>
     <div class="chips">
@@ -202,12 +236,12 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   <div class="field"><label>ما البرامج التي اتبعتها سابقاً وما نتائجها؟</label><textarea name="البرامج_السابقة_ونتائجها" placeholder="مثال: اتبعت PPL لمدة 6 أشهر، اكتسبت عضل لكن توقفت بسبب انشغال..."></textarea></div>
   <div class="field"><label>هل تدربت مع مدرب من قبل؟ وكيف كانت التجربة؟</label><textarea name="تجربة_المدرب_السابق" placeholder="مثال: نعم، لمدة 3 أشهر، كانت التجربة جيدة لكن البرنامج لم يكن مخصصاً..."></textarea></div>
   <div class="field"><label>ما المناطق العضلية الضعيفة التي تريد تطويرها؟</label><textarea name="المناطق_العضلية_الضعيفة" placeholder="مثال: الظهر، الكتف الخلفي، الساقين..."></textarea></div>
-  <div class="nav-btns"><button class="btn-prev" onclick="go(2,1)">→</button><button class="btn-next" onclick="go(2,3)">التالي ←</button></div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(3,2)">→</button><button class="btn-next" onclick="go(3,4)">التالي ←</button></div>
 </div>
 
-<!-- SEC 3: الوضع التدريبي الحالي -->
-<div class="section-card" id="sec3">
-  <div class="sec-head"><div class="sec-icon">💪</div><div><div class="sec-num">SECTION 03</div><div class="sec-title">الوضع التدريبي <span>الحالي</span></div></div></div>
+<!-- SEC 4: الوضع التدريبي الحالي -->
+<div class="section-card" id="sec4">
+  <div class="sec-head"><div><div class="sec-num">SECTION 04</div><div class="sec-title">الوضع التدريبي <span>الحالي</span></div></div></div>
   <div class="field">
     <label>كم يوماً تتدرب في الأسبوع حالياً؟</label>
     <div class="chips">
@@ -254,12 +288,34 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       <div class="chip" onclick="pick(this,'الأيام_المرغوبة_في_البرنامج','6 أيام')">6 أيام</div>
     </div>
   </div>
-  <div class="nav-btns"><button class="btn-prev" onclick="go(3,2)">→</button><button class="btn-next" onclick="go(3,4)">التالي ←</button></div>
+  <div class="field">
+    <label>كيف تتابع أوزانك وتقدمك في التمرين؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','تطبيق على الهاتف')">تطبيق على الهاتف</div>
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','ملاحظات الهاتف')">ملاحظات الهاتف</div>
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','ورقة / دفتر')">ورقة / دفتر</div>
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','Excel / Google Sheets')">Excel / Google Sheets</div>
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','لا أسجلها')">لا أسجلها</div>
+      <div class="chip" onclick="pick(this,'متابعة_الأوزان_والتقدم','أتذكرها فقط')">أتذكرها فقط</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>هل تستخدم أي إكسسوارات أو معدات مساعدة أثناء التمرين؟</label>
+    <div class="chips">
+      <div class="chip" data-no data-val="لا" onclick="multiPick(this,'الإكسسوارات_والمعدات','لا')">لا</div>
+      <div class="chip" data-val="Straps (أحزمة السحب)" onclick="multiPick(this,'الإكسسوارات_والمعدات','Straps (أحزمة السحب)')">Straps (أحزمة السحب)</div>
+      <div class="chip" data-val="حزام رفع الأثقال (Weightlifting Belt)" onclick="multiPick(this,'الإكسسوارات_والمعدات','حزام رفع الأثقال (Weightlifting Belt)')">حزام رفع الأثقال</div>
+      <div class="chip" data-val="Wrist Wraps (لفافات المعصم)" onclick="multiPick(this,'الإكسسوارات_والمعدات','Wrist Wraps (لفافات المعصم)')">Wrist Wraps</div>
+      <div class="chip" data-val="Knee Sleeves (دعامات الركبة)" onclick="multiPick(this,'الإكسسوارات_والمعدات','Knee Sleeves (دعامات الركبة)')">Knee Sleeves</div>
+      <div class="chip" data-val="Elbow Sleeves (دعامات الكوع)" onclick="multiPick(this,'الإكسسوارات_والمعدات','Elbow Sleeves (دعامات الكوع)')">Elbow Sleeves</div>
+    </div>
+  </div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(4,3)">→</button><button class="btn-next" onclick="go(4,5)">التالي ←</button></div>
 </div>
 
-<!-- SEC 4: تفضيلات التمارين -->
-<div class="section-card" id="sec4">
-  <div class="sec-head"><div class="sec-icon">❤️‍🔥</div><div><div class="sec-num">SECTION 04</div><div class="sec-title">تفضيلات <span>التمارين</span></div></div></div>
+<!-- SEC 5: تفضيلات التمارين -->
+<div class="section-card" id="sec5">
+  <div class="sec-head"><div><div class="sec-num">SECTION 05</div><div class="sec-title">تفضيلات <span>التمارين</span></div></div></div>
   <div class="field"><label>ما التمارين التي تحبها وتستمتع بأدائها؟</label><textarea name="التمارين_المحبوبة" placeholder="مثال: السكوات، بنش بريس، ديدليفت..."></textarea></div>
   <div class="field"><label>ما التمارين التي تكرهها أو تتجنبها؟ ولماذا؟</label><textarea name="التمارين_المكروهة_وسببها" placeholder="مثال: أتجنب اللانج لأنه يؤلم ركبتي..."></textarea></div>
   <div class="field"><label>ما التمارين التي تحس فيها بالعضلة بشكل جيد؟</label><textarea name="تمارين_الإحساس_الجيد" placeholder="مثال: كيبل فلاي للصدر، هامر كيرل للذراع..."></textarea></div>
@@ -274,44 +330,231 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <textarea name="سبب_تفضيل_المعدات" placeholder="السبب إن أردت التوضيح..." style="margin-top:8px"></textarea>
   </div>
   <div class="field"><label>كيف تشعر بعد انتهاء التمرين؟</label><textarea name="الشعور_بعد_التمرين" placeholder="مثال: أشعر بنشاط وطاقة / أشعر بإرهاق شديد / لا أشعر بشيء..."></textarea></div>
-  <div class="nav-btns"><button class="btn-prev" onclick="go(4,3)">→</button><button class="btn-next" onclick="go(4,5)">التالي ←</button></div>
-</div>
-
-<!-- SEC 5: الصحة والسلامة (خاص بالتدريب) -->
-<div class="section-card" id="sec5">
-  <div class="sec-head"><div class="sec-icon">🩺</div><div><div class="sec-num">SECTION 05</div><div class="sec-title">الصحة <span>والسلامة</span></div></div></div>
-  <div class="note-box">⚠️ <strong>هذا القسم سري تماماً</strong> — يساعدنا على تصميم برنامج تدريبي آمن يناسب حالتك</div>
-  <div class="field"><label>هل خضعت لعمليات جراحية كبيرة؟</label><input type="text" name="العمليات_الجراحية" placeholder="مثال: لا / نعم: استئصال الزائدة 2019..."></div>
-  <div class="field"><label>🧬 هل في أمراض قلب أو سكري في العائلة؟</label><input type="text" name="أمراض_القلب_والسكري_العائلية" placeholder="مثال: الأب مصاب بضغط الدم / لا يوجد..."></div>
   <div class="nav-btns"><button class="btn-prev" onclick="go(5,4)">→</button><button class="btn-next" onclick="go(5,6)">التالي ←</button></div>
 </div>
 
-<!-- SEC 6: النوم والتعافي -->
+<!-- SEC 6: الصحة والسلامة (خاص بالتدريب) -->
 <div class="section-card" id="sec6">
-  <div class="sec-head"><div class="sec-icon">😴</div><div><div class="sec-num">SECTION 06</div><div class="sec-title">النوم <span>والتعافي</span></div></div></div>
+  <div class="sec-head"><div><div class="sec-num">SECTION 06</div><div class="sec-title">الصحة <span>والسلامة</span></div></div></div>
+  <div class="note-box">⚠️ <strong>هذا القسم سري تماماً</strong> — يساعدنا على تصميم برنامج تدريبي آمن يناسب حالتك</div>
+  <div class="field"><label>هل خضعت لعمليات جراحية كبيرة؟</label><input type="text" name="العمليات_الجراحية" placeholder="مثال: لا / نعم: استئصال الزائدة 2019..."></div>
+  <div class="field"><label>🧬 هل في أمراض قلب أو سكري في العائلة؟</label><input type="text" name="أمراض_القلب_والسكري_العائلية" placeholder="مثال: الأب مصاب بضغط الدم / لا يوجد..."></div>
   <div class="field">
-    <label>هل تمارس تمديد أو موبيليتي بعد التمرين؟</label>
+    <label>هل لديك أي حالة صحية أو مرض مشخص يجب أن نعرف عنه؟</label>
     <div class="chips">
-      <div class="chip" onclick="pick(this,'التمديد_والموبيليتي','نعم دائماً')">نعم دائماً</div>
-      <div class="chip" onclick="pick(this,'التمديد_والموبيليتي','أحياناً')">أحياناً</div>
-      <div class="chip" onclick="pick(this,'التمديد_والموبيليتي','لا أبداً')">لا أبداً</div>
+      <div class="chip" onclick="pick(this,'حالة_صحية_مشخصة','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'حالة_صحية_مشخصة','نعم')">نعم</div>
+    </div>
+    <input type="text" name="تفاصيل_الحالة_الصحية" placeholder="إن اخترت نعم، اذكر التفاصيل..." style="margin-top:8px">
+  </div>
+  <div class="field">
+    <label>هل تتناول أي أدوية بشكل منتظم؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'أدوية_منتظمة','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'أدوية_منتظمة','نعم')">نعم</div>
+    </div>
+    <input type="text" name="تفاصيل_الأدوية" placeholder="إن اخترت نعم، اذكر اسم الدواء وسبب استخدامه..." style="margin-top:8px">
+  </div>
+  <div class="field">
+    <label>هل لديك القدرة المالية لتحاليل الدم؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'القدرة_المالية_لتحاليل_الدم','نعم')">نعم</div>
+      <div class="chip" onclick="pick(this,'القدرة_المالية_لتحاليل_الدم','على حسب التحاليل')">على حسب التحاليل</div>
+      <div class="chip" onclick="pick(this,'القدرة_المالية_لتحاليل_الدم','لا')">لا</div>
     </div>
   </div>
   <div class="field">
-    <label>كم يوم راحة تأخذ بين جلسات التدريب نفس العضلة؟</label>
+    <label>هل لديك حساسية من أي أطعمة أو مكملات غذائية؟</label>
     <div class="chips">
-      <div class="chip" onclick="pick(this,'أيام_الراحة_بين_الجلسات','يوم واحد')">يوم واحد</div>
-      <div class="chip" onclick="pick(this,'أيام_الراحة_بين_الجلسات','يومان')">يومان</div>
-      <div class="chip" onclick="pick(this,'أيام_الراحة_بين_الجلسات','3 أيام أو أكثر')">3 أيام+</div>
-      <div class="chip" onclick="pick(this,'أيام_الراحة_بين_الجلسات','لا أعرف')">لا أعرف</div>
+      <div class="chip" onclick="pick(this,'حساسية_أطعمة_أو_مكملات','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'حساسية_أطعمة_أو_مكملات','نعم')">نعم</div>
     </div>
+    <input type="text" name="تفاصيل_الحساسية" placeholder="إن اخترت نعم، اذكرها..." style="margin-top:8px">
+  </div>
+  <div class="field">
+    <label>هل تعاني من أي مشاكل أو اضطرابات هضمية؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'مشاكل_هضمية','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'مشاكل_هضمية','نعم')">نعم</div>
+    </div>
+    <input type="text" name="تفاصيل_المشاكل_الهضمية" placeholder="مثل: الانتفاخ، الحموضة، القولون، الإمساك، الإسهال..." style="margin-top:8px">
+  </div>
+  <div class="field">
+    <label>هل سبق لك استخدام هرمونات أو مواد هرمونية خارجية لتحسين الأداء أو بناء العضلات؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'استخدام_هرمونات','لا، لم أستخدمها أبدًا')">لا، لم أستخدمها أبدًا</div>
+      <div class="chip" onclick="pick(this,'استخدام_هرمونات','نعم، أستخدمها حاليًا')">نعم، أستخدمها حاليًا</div>
+      <div class="chip" onclick="pick(this,'استخدام_هرمونات','نعم، استخدمتها سابقًا')">نعم، استخدمتها سابقًا</div>
+      <div class="chip" onclick="pick(this,'استخدام_هرمونات','نعم، استخدمتها حاليًا وسابقًا')">نعم، استخدمتها حاليًا وسابقًا</div>
+    </div>
+    <input type="text" name="تفاصيل_الهرمونات" placeholder="إذا كانت الإجابة نعم: ما الذي استخدمته ومتى كانت آخر مرة؟" style="margin-top:8px">
   </div>
   <div class="nav-btns"><button class="btn-prev" onclick="go(6,5)">→</button><button class="btn-next" onclick="go(6,7)">التالي ←</button></div>
 </div>
 
-<!-- SEC 7: التوقعات والإنهاء -->
+<!-- SEC 7: التغذية ونمط الحياة -->
 <div class="section-card" id="sec7">
-  <div class="sec-head"><div class="sec-icon">🤝</div><div><div class="sec-num">SECTION 07</div><div class="sec-title">التوقعات <span>والإنهاء</span></div></div></div>
+  <div class="sec-head"><div><div class="sec-num">SECTION 07</div><div class="sec-title">التغذية <span>ونمط الحياة</span></div></div></div>
+  <div class="grid2">
+    <div class="field">
+      <label>كم وجبة تأكل يومياً؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'عدد_الوجبات','1-2 وجبات')">1–2 وجبات</div>
+        <div class="chip" onclick="pick(this,'عدد_الوجبات','3 وجبات')">3 وجبات</div>
+        <div class="chip" onclick="pick(this,'عدد_الوجبات','4-5 وجبات')">4–5 وجبات</div>
+      </div>
+    </div>
+    <div class="field">
+      <label>كم لتر ماء تشرب يومياً؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'كمية_الماء_اليومية','أقل من 1.5 لتر')">أقل من 1.5L</div>
+        <div class="chip" onclick="pick(this,'كمية_الماء_اليومية','1.5-2 لتر')">1.5–2L</div>
+        <div class="chip" onclick="pick(this,'كمية_الماء_اليومية','2-3 لتر')">2–3L</div>
+        <div class="chip" onclick="pick(this,'كمية_الماء_اليومية','أكثر من 3 لتر')">+3L</div>
+      </div>
+    </div>
+  </div>
+  <div class="field"><label>كيف يبدو نظامك الغذائي اليومي؟ اذكر وجباتك</label><textarea name="النظام_الغذائي_اليومي" placeholder="مثال:&#10;الفطور: بيض + خبز&#10;الغداء: دجاج + أرز&#10;العشاء: جبن + خضار"></textarea></div>
+  <div class="field"><label>هل تحسب السعرات أو البروتين؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'حساب_السعرات_والبروتين','نعم — بانتظام')">نعم بانتظام</div>
+      <div class="chip" onclick="pick(this,'حساب_السعرات_والبروتين','أحياناً')">أحياناً</div>
+      <div class="chip" onclick="pick(this,'حساب_السعرات_والبروتين','لا')">لا</div>
+    </div>
+  </div>
+  <div class="field"><label>ما الأطعمة التي لا تأكلها أو تكرهها؟</label><input type="text" name="الأطعمة_المكروهة" placeholder="مثال: لا أحب السمك، لا آكل الكبدة..."></div>
+  <div class="field"><label>هل تأكل خارج البيت بكثرة — وما ميزانيتك للأكل؟</label><input type="text" name="الأكل_خارج_والميزانية" placeholder="مثال: مرتين أسبوعياً، ميزانية ~3000 دج/يوم"></div>
+  <div class="field"><label>هل تدخن؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'التدخين','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'التدخين','نعم — أقل من علبة')">أقل من علبة/يوم</div>
+      <div class="chip" onclick="pick(this,'التدخين','نعم — علبة أو أكثر')">علبة أو أكثر</div>
+      <div class="chip" onclick="pick(this,'التدخين','سابقاً وتوقفت')">توقفت</div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="field"><label>كم مرة تأكل السمك في الأسبوع؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'استهلاك_السمك_أسبوعياً','نادراً أو لا')">نادراً / لا</div>
+        <div class="chip" onclick="pick(this,'استهلاك_السمك_أسبوعياً','مرة واحدة')">مرة/أسبوع</div>
+        <div class="chip" onclick="pick(this,'استهلاك_السمك_أسبوعياً','مرتان أو أكثر')">مرتان+</div>
+      </div>
+    </div>
+    <div class="field"><label>كم بيضة تأكل في اليوم؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'عدد_البيض_اليومي','لا آكل بيض')">لا آكل</div>
+        <div class="chip" onclick="pick(this,'عدد_البيض_اليومي','1-2 بيضة')">1–2</div>
+        <div class="chip" onclick="pick(this,'عدد_البيض_اليومي','3-4 بيضات')">3–4</div>
+        <div class="chip" onclick="pick(this,'عدد_البيض_اليومي','5 أو أكثر')">5+</div>
+      </div>
+    </div>
+  </div>
+  <div class="field"><label>ما مصادر البروتين اليومية وكم تأكل منها؟</label><textarea name="مصادر_البروتين_اليومية" placeholder="مثال: دجاج 200غ + بيض 3 + جبن + تونة..."></textarea></div>
+  <div class="field">
+    <label>تطبخ بأي نوع زيت؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'نوع_الزيت','زيت عادي')">زيت عادي</div>
+      <div class="chip" onclick="pick(this,'نوع_الزيت','زيت زيتون')">زيت زيتون</div>
+      <div class="chip" onclick="pick(this,'نوع_الزيت','كلاهما')">كلاهما</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>هل تتناول المكسرات؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'تناول_المكسرات','نعم — بانتظام')">نعم بانتظام</div>
+      <div class="chip" onclick="pick(this,'تناول_المكسرات','أحياناً')">أحياناً</div>
+      <div class="chip" onclick="pick(this,'تناول_المكسرات','لا')">لا</div>
+    </div>
+  </div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(7,6)">→</button><button class="btn-next" onclick="go(7,8)">التالي ←</button></div>
+</div>
+
+<!-- SEC 8: النوم والتعافي -->
+<div class="section-card" id="sec8">
+  <div class="sec-head"><div><div class="sec-num">SECTION 08</div><div class="sec-title">النوم <span>والتعافي</span></div></div></div>
+  <div class="field">
+    <label>كم ساعة تنام يومياً؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'ساعات_النوم','أقل من 5 ساعات')">أقل من 5</div>
+      <div class="chip" onclick="pick(this,'ساعات_النوم','5-6 ساعات')">5–6 س</div>
+      <div class="chip" onclick="pick(this,'ساعات_النوم','7-8 ساعات')">7–8 س</div>
+      <div class="chip" onclick="pick(this,'ساعات_النوم','أكثر من 8 ساعات')">+8 س</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>كيف جودة نومك؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'جودة_النوم','ممتازة — أستيقظ نشيطاً')">ممتازة</div>
+      <div class="chip" onclick="pick(this,'جودة_النوم','جيدة')">جيدة</div>
+      <div class="chip" onclick="pick(this,'جودة_النوم','سيئة — أستيقظ متعباً')">سيئة</div>
+      <div class="chip" onclick="pick(this,'جودة_النوم','أرق متكرر')">أرق متكرر</div>
+    </div>
+  </div>
+  <div class="field">
+    <label>مستوى التوتر في حياتك اليومية؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'مستوى_التوتر','منخفض — هادئ')">منخفض</div>
+      <div class="chip" onclick="pick(this,'مستوى_التوتر','متوسط')">متوسط</div>
+      <div class="chip" onclick="pick(this,'مستوى_التوتر','مرتفع')">مرتفع</div>
+      <div class="chip" onclick="pick(this,'مستوى_التوتر','شديد جداً')">شديد جداً</div>
+    </div>
+  </div>
+  <div class="field"><label>هل تعاني من شخير شديد أو انقطاع التنفس أثناء النوم؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'الشخير_وانقطاع_التنفس','لا')">لا</div>
+      <div class="chip" onclick="pick(this,'الشخير_وانقطاع_التنفس','شخير فقط')">شخير فقط</div>
+      <div class="chip" onclick="pick(this,'الشخير_وانقطاع_التنفس','نعم انقطاع تنفس مشخص')">انقطاع تنفس مشخص</div>
+    </div>
+  </div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(8,7)">→</button><button class="btn-next" onclick="go(8,9)">التالي ←</button></div>
+</div>
+
+<!-- SEC 9: المكملات الغذائية -->
+<div class="section-card" id="sec9">
+  <div class="sec-head"><div><div class="sec-num">SECTION 09</div><div class="sec-title">المكملات <span>الغذائية</span></div></div></div>
+  <div class="field"><label>ما المكملات التي تستخدمها حالياً مع الجرعة؟</label><textarea name="المكملات_الحالية_والجرعة" placeholder="مثال: كرياتين 5غ/يوم، واي بروتين سيرفيتشن بعد التمرين، فيتامين D3 2000IU..."></textarea></div>
+  <div class="field"><label>ما المكملات التي جربتها سابقاً وما نتيجتها؟</label><textarea name="المكملات_السابقة_ونتائجها" placeholder="مثال: جربت البري وركاوت — أعطاني طاقة جيدة / جربت BCAA — ما لاحظت فرقاً..."></textarea></div>
+  <div class="grid2">
+    <div class="field"><label>كيف تحملك للكافيين؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'تحمل_الكافيين','ضعيف — يسبب قلق')">ضعيف</div>
+        <div class="chip" onclick="pick(this,'تحمل_الكافيين','متوسط')">متوسط</div>
+        <div class="chip" onclick="pick(this,'تحمل_الكافيين','عالي — لا أحس بأثره')">عالي</div>
+      </div>
+    </div>
+    <div class="field"><label>هل الواي بروتين يسبب مشاكل هضمية؟</label>
+      <div class="chips" style="flex-direction:column;gap:5px;">
+        <div class="chip" onclick="pick(this,'مشاكل_هضمية_من_الواي','نعم')">نعم</div>
+        <div class="chip" onclick="pick(this,'مشاكل_هضمية_من_الواي','لا')">لا</div>
+        <div class="chip" onclick="pick(this,'مشاكل_هضمية_من_الواي','لم أجربه')">لم أجربه</div>
+      </div>
+    </div>
+  </div>
+  <div class="field"><label>كم ميزانيتك الشهرية للمكملات؟</label><input type="text" name="ميزانية_المكملات_الشهرية" placeholder="مثال: 3000–5000 دج / لا ميزانية محددة..."></div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(9,8)">→</button><button class="btn-next" onclick="go(9,10)">التالي ←</button></div>
+</div>
+
+<!-- SEC 10: النفسي والقياسات -->
+<div class="section-card" id="sec10">
+  <div class="sec-head"><div><div class="sec-num">SECTION 10</div><div class="sec-title">النفسي <span>والقياسات</span></div></div></div>
+  <div class="field"><label>هل مررت بفترات توقف متكررة؟ ما السبب؟</label><textarea name="فترات_التوقف_وسببها" placeholder="مثال: نعم، أتوقف كل 2-3 أشهر بسبب الانشغال بالعمل..."></textarea></div>
+  <div class="field"><label>ما أكثر شيء يحبطك في التدريب والتغذية؟</label><textarea name="أسباب_الإحباط" placeholder="مثال: بطء النتائج، صعوبة الالتزام بالحمية في المناسبات..."></textarea></div>
+  <hr class="divider-line">
+  <div class="field"><label>💪 مستوى القوة الحالي — اختياري</label><textarea name="مستوى_القوة_الحالي" placeholder="سكوات:      | ديدليفت:    | بنش:        | أوفرهيد:    | Pull Up: __ تكرار" style="min-height:60px"></textarea></div>
+  <div class="field">
+    <label>هل عندك ميزان في البيت؟</label>
+    <div class="chips">
+      <div class="chip" onclick="pick(this,'ميزان_في_البيت','نعم')">نعم</div>
+      <div class="chip" onclick="pick(this,'ميزان_في_البيت','لا')">لا</div>
+    </div>
+  </div>
+  <div class="nav-btns"><button class="btn-prev" onclick="go(10,9)">→</button><button class="btn-next" onclick="go(10,11)">التالي ←</button></div>
+</div>
+
+
+<!-- SEC 11: التوقعات والإنهاء -->
+<div class="section-card" id="sec11">
+  <div class="sec-head"><div><div class="sec-num">SECTION 11</div><div class="sec-title">التوقعات <span>والإنهاء</span></div></div></div>
   <div class="field" id="f_wa">
     <label>رقم الواتساب للتواصل <span class="req">*</span></label>
     <input type="tel" name="رقم_الواتساب" id="i_wa" placeholder="مثال: 0555123456">
@@ -319,12 +562,11 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </div>
   <div class="send-error" id="sendErr">⚠️ حدث خطأ أثناء الإرسال. تحقق من اتصالك وحاول مجدداً.</div>
   <div class="nav-btns">
-    <button class="btn-prev" onclick="go(7,6)">→</button>
+    <button class="btn-prev" onclick="go(11,10)">→</button>
     <button class="btn-next" id="btnSub" onclick="submitForm()">إرسال الاستبيان ✦</button>
   </div>
 </div>
 
-<!-- THANK YOU -->
 <div class="thankyou" id="thankyou">
   <div class="ty-card">
     <span class="ty-icon">🏆</span>
@@ -340,8 +582,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 </div><!-- form-wrap -->
 
 <script>
-const TITLES=['المعلومات الشخصية','التاريخ التدريبي','الوضع الحالي','تفضيلات التمارين','الصحة والسلامة','النوم والتعافي','التوقعات والإنهاء'];
-const TOTAL = 7;
+const TITLES=['المعلومات الشخصية','النشاط اليومي','الخبرة والتجربة التدريبية','الوضع الحالي','تفضيلات التمارين','الصحة والسلامة','التغذية ونمط الحياة','النوم والتعافي','المكملات الغذائية','النفسي والقياسات','التوقعات والإنهاء'];
+const TOTAL = 11;
 let cur = 1;
 let picks = {};
 let saveTimer = null;
@@ -366,6 +608,7 @@ function updateDots(current) {
     else if (i === current) d.classList.add('active');
   }
 }
+
 
 /* ─── AUTO-SAVE ─── */
 const LS_KEY = 'coach_anis_training_form';
@@ -437,6 +680,26 @@ function pick(el, name, val) {
   saveToStorage();
 }
 
+function multiPick(el, name, val) {
+  const chips = el.closest('.chips');
+  if (val === 'لا') {
+    chips.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+    el.classList.add('on');
+    picks[name] = 'لا';
+  } else {
+    const noChip = chips.querySelector('.chip[data-no]');
+    if (noChip) noChip.classList.remove('on');
+    el.classList.toggle('on');
+    const selected = [];
+    chips.querySelectorAll('.chip.on').forEach(c => {
+      const v = c.getAttribute('data-val');
+      if (v && v !== 'لا') selected.push(v);
+    });
+    picks[name] = selected.length ? selected.join('، ') : '';
+  }
+  saveToStorage();
+}
+
 /* ─── TOAST ─── */
 function showToast(msg) {
   const t = document.getElementById('toast');
@@ -473,7 +736,7 @@ function validateSection(secNum) {
     }
   }
 
-  if (secNum === 7) {
+  if (secNum === 11) {
     const wa = document.getElementById('i_wa');
     const fWa = document.getElementById('f_wa');
     const errMsg = document.getElementById('wa_err_msg');
@@ -514,9 +777,51 @@ function go(from, to) {
   saveToStorage();
 }
 
+/* ─── COACH WHATSAPP (BACKUP) ─── */
+const COACH_WA = '213655823870';
+
+function buildWhatsAppSummary() {
+  const fields = {};
+  document.querySelectorAll('.section-card [name]').forEach(el => {
+    const v = el.value.trim();
+    if (v) fields[el.name] = v;
+  });
+  Object.assign(fields, picks);
+  const name = fields['الاسم_الكامل'] || 'عميل';
+  let msg = `📋 استبيان برنامج تدريبي جديد\nالاسم: ${name}\n\n`;
+  Object.entries(fields).forEach(([k, v]) => {
+    if (k === 'الاسم_الكامل') return;
+    msg += `${k.replace(/_/g, ' ')}: ${v}\n`;
+  });
+  return msg;
+}
+
+function openWhatsAppFallback() {
+  const msg = buildWhatsAppSummary();
+  const url = `https://wa.me/${COACH_WA}?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function trySubmitToFormspree(fd, attempts = 3) {
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      const res = await fetch('https://formspree.io/f/maqlwbdy', {
+        method: 'POST',
+        body: fd,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) return true;
+    } catch (e) { /* network error, retry */ }
+    if (i < attempts) await sleep(1200 * i);
+  }
+  return false;
+}
+
 /* ─── SUBMIT ─── */
 async function submitForm() {
-  if (!validateSection(7)) {
+  if (!validateSection(11)) {
     showToast('⚠️ الرجاء إدخال رقم الواتساب الصحيح');
     return;
   }
@@ -537,28 +842,24 @@ async function submitForm() {
   fd.append('نوع_الاستمارة', 'برنامج تدريبي فقط');
   fd.append('_subject', 'استبيان تدريب جديد: ' + nameVal + ' — Coach Anis');
 
-  try {
-    const res = await fetch('https://formspree.io/f/maqlwbdy', {
-      method: 'POST',
-      body: fd,
-      headers: { 'Accept': 'application/json' }
-    });
+  btn.textContent = '⏳ جاري الإرسال... (قد يعيد المحاولة تلقائياً)';
+  const ok = await trySubmitToFormspree(fd, 3);
 
-    if (res.ok) {
-      try { localStorage.removeItem(LS_KEY); } catch(e){}
-      document.getElementById('sec7').classList.remove('active');
-      document.querySelector('.progress-wrap').style.display = 'none';
-      const firstName = nameVal.split(' ')[0];
-      document.getElementById('ty_name').textContent = firstName + '!';
-      document.getElementById('thankyou').style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      throw new Error('Server error ' + res.status);
-    }
-  } catch(err) {
+  if (ok) {
+    try { localStorage.removeItem(LS_KEY); } catch(e){}
+    document.getElementById('sec11').classList.remove('active');
+    document.querySelector('.progress-wrap').style.display = 'none';
+    const firstName = nameVal.split(' ')[0];
+    document.getElementById('ty_name').textContent = firstName + '!';
+    document.getElementById('thankyou').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    // فشلت كل المحاولات — نفتح واتساب تلقائياً كخطة بديلة حتى لا تضيع بيانات العميل
     btn.textContent = 'إرسال الاستبيان ✦';
     btn.disabled = false;
     errBox.style.display = 'block';
+    errBox.innerHTML = '⚠️ تعذّر الإرسال المباشر — تم فتح واتساب لإرسال بياناتك مباشرة للمدرب، الرجاء الضغط على "إرسال" هناك.<br><button type="button" onclick="openWhatsAppFallback()" style="margin-top:8px;background:#25D366;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-family:\'Cairo\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📲 إرسال عبر واتساب الآن</button>';
+    openWhatsAppFallback();
   }
 }
 
@@ -585,6 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buildDots();
   loadFromStorage();
   attachSaveListeners();
+
 
   document.querySelectorAll('.section-card input, .section-card select, .section-card textarea').forEach(el => {
     el.addEventListener('input', () => {
